@@ -1,0 +1,57 @@
+﻿<Window x:Class="ImpotsLST.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ImpotsLST"
+        mc:Ignorable="d"
+        Title="Calcul d'impôt au Senegal" Height="720" Width="800">
+    <Grid>
+        <Image HorizontalAlignment="Left" Height="50" Margin="23,40.5,0,0" VerticalAlignment="Top" Width="78" Source="drapeau.jpg" RenderTransformOrigin="-1.377,0.638"/>
+        <Image HorizontalAlignment="Left" Height="50" Margin="689,40.5,0,0" VerticalAlignment="Top" Width="78" Source="drapeau.jpg" RenderTransformOrigin="-1.377,0.638"/>
+        <Image HorizontalAlignment="Left" Height="100" Margin="360.5,61.5,0,0" VerticalAlignment="Top" Width="87" Source="embleme.jpeg" RenderTransformOrigin="0.948,0.315"/>
+        <TextBlock HorizontalAlignment="Left" Height="25.5" Margin="279.5,118.5,0,0" TextWrapping="Wrap" Text="un peuple" VerticalAlignment="Top" Width="76.5" FontSize="14" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Height="25.5" Margin="375.5,163.5,0,0" TextWrapping="Wrap" Text="un but" VerticalAlignment="Top" Width="48" FontSize="14" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Height="25.5" Margin="452,118.5,0,0" TextWrapping="Wrap" Text="une foi" VerticalAlignment="Top" Width="76.5" FontSize="14" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Height="24" Margin="285.5,33,0,0" TextWrapping="Wrap" Text="REPUBLIQUE DU SENEGAL" VerticalAlignment="Top" Width="228" FontSize="18" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Name="CurrentDate" Height="28.5" Margin="224,4.5,0,0" TextWrapping="Wrap" Text="Date d'aujourd'hui : lundi 4 décembre 2019" VerticalAlignment="Top" Width="388.5" FontSize="18"/>
+        <Rectangle Fill="#FF6DD831" HorizontalAlignment="Left" Height="34.5" Margin="267.5,190.5,0,0" Stroke="Black" VerticalAlignment="Top" Width="273"/>
+        <TextBlock HorizontalAlignment="Left" Height="24" Margin="332,196.5,0,0" TextWrapping="Wrap" Text="SIMULATION D'IMPOTS" VerticalAlignment="Top" Width="154.5" FontSize="14"/>
+        <Rectangle Fill="#FFF" HorizontalAlignment="Left" Height="46.5" Margin="47,136.5,0,0" Stroke="Black" VerticalAlignment="Top" Width="220.5"/>
+        <TextBlock HorizontalAlignment="Left" Height="22.5" Margin="57.5,150,0,0" TextWrapping="Wrap" Text="Copyright Meïssa B.C MBAYE" VerticalAlignment="Top" Width="195" FontWeight="Bold" FontSize="14"/>
+        <Rectangle Fill="#FFEBF3E7" HorizontalAlignment="Left" Height="189.5" Margin="12.5,232.5,0,0" Stroke="#FF6DD831" VerticalAlignment="Top" Width="760.5"/>
+        <Rectangle Fill="#FFEBF3E7" HorizontalAlignment="Left" Height="189.5" Margin="12.5,481.5,0,0" Stroke="#FF6DD831" VerticalAlignment="Top" Width="760.5"/>
+        <Button Content="Valider" Click="ValiderButton_Click" HorizontalAlignment="Left" Height="30" Margin="12.5,436.5,0,0" VerticalAlignment="Top" Width="145.5" Background="#FF6DD831" FontSize="14"/>
+        <Button Content="Annuler" Click="AnnulerButton_Click" HorizontalAlignment="Left" Height="30" Margin="222.5,436.5,0,0" VerticalAlignment="Top" Width="145.5" Background="#FF6DD831" FontSize="14"/>
+        <Button Content="Liste des employés" Click="ListeEmployeButton_Click" HorizontalAlignment="Left" Height="30" Margin="435.5,436.5,0,0" VerticalAlignment="Top" Width="145.5" Background="#FFEBF3E7" FontSize="14"/>
+        <Button Content="Quitter" Click="QuitterButton_Click" HorizontalAlignment="Left" Height="30" Margin="626,436.5,0,0" VerticalAlignment="Top" Width="145.5" Background="#FFF91616" FontSize="14"/>
+        <Label Content="Nom" HorizontalAlignment="Left" Height="27" Margin="30,250,0,0" VerticalAlignment="Top" Width="87" FontSize="14"/>
+        <Label Content="Salaire Brut" HorizontalAlignment="Left" Height="27" Margin="28.5,290,0,0" VerticalAlignment="Top" Width="87" FontSize="14"/>
+        <Label Content="Conjoint" HorizontalAlignment="Left" Height="34.5" Margin="28.5,330,0,0" VerticalAlignment="Top" Width="87" FontSize="14"/>
+        <TextBox HorizontalAlignment="Left" Name="nom" Height="20" Margin="158,255,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
+        <TextBox HorizontalAlignment="Left" Name="salaire" Height="20" Margin="158,295,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
+        <TextBox HorizontalAlignment="Left" Name="conjoint" Height="20" Margin="158,335,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
+        <Label Content="Prenom" HorizontalAlignment="Left" Height="27" Margin="459,250,0,0" VerticalAlignment="Top" Width="87" FontSize="14"/>
+        <Label Content="Nbre de jours" HorizontalAlignment="Left" Height="33" Margin="459,290,0,0" VerticalAlignment="Top" Width="97.5" FontSize="14"/>
+        <Label Content="Enfants" HorizontalAlignment="Left" Height="27" Margin="459,330,0,0" VerticalAlignment="Top" Width="87" FontSize="14"/>
+        <TextBox HorizontalAlignment="Left" Name="prenom" Height="20" Margin="587,255,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
+        <TextBox HorizontalAlignment="Left" Name="jours" Height="20" Margin="587,295,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
+        <TextBox HorizontalAlignment="Left" Name="enfant" Height="20" Margin="587,335,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
+        <TextBlock HorizontalAlignment="Left" Height="42.5" Margin="158,370,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" FontSize="14"><Run Text="0 : Célibataire"/><LineBreak/><Run Text="1 : Conjoint non salarié"/></TextBlock>
+        <Rectangle Fill="#FFF" HorizontalAlignment="Left" Height="37.5" Margin="566,377.5,0,0" Stroke="#FF0D0E0D" VerticalAlignment="Top" Width="201"/>
+        <TextBlock HorizontalAlignment="Left" Height="25.5" Margin="576,385,0,0" TextWrapping="Wrap" Text="Matricule :" VerticalAlignment="Top" Width="72" FontWeight="Bold" FontSize="14"/>
+        <TextBox HorizontalAlignment="Left" Name="matricule" Height="28.5" Margin="653,385,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="112" FontWeight="Bold" FontSize="14" BorderBrush="White"/>
+        <Label Name="brutFiscalAnnuel" Content="Brut Fiscal Annuel" HorizontalAlignment="Left" Height="27" Margin="30,500,0,0" VerticalAlignment="Top" Width="289.5" FontSize="14"/>
+        <Label Name="brutFiscalAbattement" Content="Brut Fiscal après Abattement" HorizontalAlignment="Left" Height="27" Margin="30,540,0,0" VerticalAlignment="Top" Width="346.5" FontSize="14"/>
+        <Label Name="IRPP" Content="IRPP avant réduction" HorizontalAlignment="Left" Height="27" Margin="30,580,0,0" VerticalAlignment="Top" Width="289.5" FontSize="14"/>
+        <Label Name="abattement" Content="Abattement" HorizontalAlignment="Left" Height="27" Margin="459,500,0,0" VerticalAlignment="Top" Width="259.5" FontSize="14"/>
+        <Label Name="nbreParts" Content="Nombre de parts" HorizontalAlignment="Left" Height="27" Margin="459,540,0,0" VerticalAlignment="Top" Width="262.5" FontSize="14"/>
+        <Label Name="reduction" Content="Réduction" HorizontalAlignment="Left" Height="27" Margin="459,580,0,0" VerticalAlignment="Top" Width="259.5" FontSize="14"/>
+        <Rectangle Fill="#FF6DD831" HorizontalAlignment="Left" Height="34.5" Margin="39.5,618.5,0,0" Stroke="Black" VerticalAlignment="Top" Width="100.5"/>
+        <TextBlock HorizontalAlignment="Left" Height="24" Margin="65,625.5,0,0" TextWrapping="Wrap" Text="IMPOTS" VerticalAlignment="Top" Width="60" FontSize="14"/>
+        <Rectangle Fill="#FFF" HorizontalAlignment="Left" Height="43.5" Margin="399.5,619.5,0,0" Stroke="#FF1A1B1A" VerticalAlignment="Top" Width="298.5"/>
+        <TextBlock x:Name="salaireNet" HorizontalAlignment="Left" Height="27" Margin="446,630,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="246" FontWeight="Bold" FontSize="14" Text="Salaire Net :"/>
+        <TextBlock Name="impot" HorizontalAlignment="Left" Height="22.5" Margin="159.5,625.5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="162" FontSize="14"/>
+    
+    </Grid>
+</Window>
